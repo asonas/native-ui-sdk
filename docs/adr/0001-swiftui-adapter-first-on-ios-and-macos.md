@@ -7,7 +7,7 @@ This does not decide whether the SwiftUI adapter may use AppKit or UIKit interna
 ## Considered Options
 
 - **SwiftUI and AppKit from the start.** Would validate the core/adapter boundary against two implementations at once, but SwiftUI and AppKit differ fundamentally in lifecycle and event model, which adds work to the first primitive before the pattern has settled.
-- **SwiftUI only, with SwiftUI types allowed in the core.** Simpler at first, but would make an AppKit or UIKit adapter a rewrite rather than an addition.
+- **SwiftUI only, with SwiftUI types allowed in the core.** Simpler at first, but could require refactoring the core before adding an AppKit or UIKit adapter.
 - **A single platform (macOS only or iOS only).** Narrower scope, but would postpone the question of whether one core can serve the different input styles of iOS and macOS, which is central to the library's value.
 
 ## Consequences
