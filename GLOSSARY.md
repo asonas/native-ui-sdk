@@ -11,3 +11,7 @@ _Avoid_: engine, model
 **Adapter**:
 The layer that connects the core to one UI framework, such as SwiftUI.
 _Avoid_: binding, bridge, renderer
+
+**Highlighted item**:
+The item the user is about to act on, tracked by the core apart from where the platform's keyboard or accessibility focus is.
+_Avoid_: focus, active item, selection
