@@ -17,7 +17,7 @@ The item that navigation currently points at, which may differ from where the pl
 _Avoid_: focus, active item, selection
 
 **Event**:
-Something that happened, reported to the core: a user operation, a change the system made on its own, the outcome of an effect, or the passage of time.
+Something that happened, reported to the core: a semantic operation by the user, a change the system made on its own, the outcome of an effect, or the passage of time.
 _Avoid_: action, message, input
 
 **Effect**:
