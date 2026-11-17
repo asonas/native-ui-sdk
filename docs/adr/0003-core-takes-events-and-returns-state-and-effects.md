@@ -2,7 +2,7 @@
 
 Issue #5 asked what crosses the boundary between the core and an adapter. It also inherited two questions from ADR 0001: which non-UI frameworks the core may use, and whether the SwiftUI adapter may use AppKit or UIKit internally.
 
-The core receives events from the adapter and returns the new state together with effects, which are instructions such as "move focus to the second item" or "dismiss". The core never performs effects itself; the adapter carries them out. This keeps the core testable without a UI and lets an AppKit or UIKit adapter be added later without changing how the core is driven. How transitions are written inside the core, and whether the core holds its state or receives it with each event, are left to #7.
+The core receives events from the adapter and returns the new state together with effects, which are instructions such as "return focus to the trigger" or "dismiss". The core never performs effects itself; the adapter carries them out. This keeps the core testable without a UI and lets an AppKit or UIKit adapter be added later without changing how the core is driven. How transitions are written inside the core, and whether the core holds its state or receives it with each event, are left to #7.
 
 Everything the adapter observes also reaches the core as events: changes the system makes on its own (for example, the user swiping a presented menu away), the outcome of an effect, and the passage of time. The core does not read clocks or schedule timers. Any time information it needs arrives with events, and a timer is requested as an effect whose expiry the adapter reports back as an event.
 
