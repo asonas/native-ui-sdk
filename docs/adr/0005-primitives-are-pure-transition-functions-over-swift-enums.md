@@ -30,5 +30,5 @@ Whether to introduce a DSL will be revisited once there are about three primitiv
 - Every adapter is responsible for storing each primitive's state, queuing events that arrive while it carries out effects, and starting the returned effects in order.
 - Any step that must follow the completion of an effect needs a completion event, so primitives may have more events and transitions than a sequence of effects would suggest.
 - Transition functions handle every event explicitly, including events that change nothing in a given state, so they grow with the number of events.
-- How a transition recognizes an effect's outcome that arrives after the state has moved on, such as a dismissal completing after the menu was opened again, is not decided here and has to be settled before the Menu is implemented.
+- How a transition recognizes an effect's outcome that arrives after the state has moved on, such as a dismissal completing after the menu was opened again, is not decided here; ADR 0008 settles it for the Menu with a presentation number carried by those effects and their outcome events.
 - The behavior details ADR 0004 left to the Menu's interaction specification, such as where the first key moves the highlight, are not decided by choosing a representation; ADR 0007 specifies them.

@@ -20,6 +20,10 @@ _Avoid_: component, widget
 The item that navigation currently points at, which may differ from where the platform's keyboard or accessibility focus is.
 _Avoid_: focus, active item, selection
 
+**Presentation**:
+One showing of a primitive such as the Menu, from the operation that opens it until it is reported closed. Opening the menu again starts a new presentation, even while the previous one is still closing.
+_Avoid_: session, instance, appearance
+
 **Action**:
 The work the app attaches to an item, performed when the item is chosen. The library decides when an item is chosen, not what its action does.
 _Avoid_: handler, callback
