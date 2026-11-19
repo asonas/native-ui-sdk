@@ -21,7 +21,7 @@ The item that navigation currently points at, which may differ from where the pl
 _Avoid_: focus, active item, selection
 
 **Presentation**:
-One showing of a primitive such as the Menu, from the operation that opens it until it is reported closed. Opening the menu again starts a new presentation, even while the previous one is still closing.
+One showing of a primitive such as the Menu, started by an accepted open operation. Reports about it, such as that it has closed, can still arrive after the next presentation has started.
 _Avoid_: session, instance, appearance
 
 **Action**:
